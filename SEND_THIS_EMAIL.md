@@ -34,7 +34,11 @@ Founder-to-founder — a partnership idea for Docthub
 
 ## Attachment
 
-`pdfs/Halcyon-Docthub-Proposal.pdf`
+Drag this file into the Gmail compose window:
+
+```
+/Users/naitikjoshi/Downloads/halcyon-docthub-outreach/pdfs/Halcyon-Docthub-Proposal.pdf
+```
 
 ---
 
@@ -56,15 +60,7 @@ What we've put together is a three-track partnership built around relationships 
 
 Important framing on the numbers: nothing on Tracks B and C is upfront. There's no retainer, no fixed fee, no guaranteed payment. Channel commission only flows after a referred US practice signs a Halcyon contract and pays its first invoice. From that point, per practice that signs and stays — for a mid-range US clinic ($130K/mo collections) — Track C earns Docthub roughly $8,775 in Year 1 and $7,800 every year after (at INR/USD ₹94, that's ~₹8.25L Year 1 and ~₹7.33L recurring per year). Track B earns 20% of those numbers, since recruiters take the larger share. What Docthub actually books equals (number of closes) × per-practice revenue. We are not projecting a number of closes.
 
-The full 7-page proposal:
-
-HTML
-https://naitikjoshipro.github.io/halcyon-docthub-outreach/proposals/halcyon-docthub-proposal.html
-
-PDF (attached to this email)
-https://naitikjoshipro.github.io/halcyon-docthub-outreach/pdfs/Halcyon-Docthub-Proposal.pdf
-
-The structural pitch is that this is a first-of-its-kind revenue line for Docthub — a partner program monetising existing relationships with no new product builds, no headcount, and no marketing spend on your side.
+The full 7-page proposal is attached. The structural pitch: this is a first-of-its-kind revenue line for Docthub — a partner program monetising existing relationships with no new product builds, no headcount, and no marketing spend on your side.
 
 The ask is small: a 25-minute founder-to-founder call before 27 May 2026. I'd love to walk you through the Track A integration spec and a soft-launch plan for B and C. Our CFO Rushan Khan will join to handle commercials. Decision out of the call: yes/no on the Track A pilot.
 
