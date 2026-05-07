@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Halcyon × Docthub — Outreach Package</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy-950:#060F18; --navy-900:#0C1D2B; --navy-800:#112436; --navy-700:#1A3A4F;
+    --navy-600:#22506A; --navy-500:#2A6080; --navy-400:#4A7A9F;
+    --gold-500:#B8953A; --gold-400:#D4AF60; --gold-600:#9A7520;
+    --cream:#FAFAF8; --parchment:#F2EFE9; --muted-dark:#7A95A5;
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family:'Inter', system-ui, sans-serif;
+    color:#374151; background:#fff;
+    -webkit-font-smoothing:antialiased;
+  }
+  .hero-bg {
+    background-color: var(--navy-900);
+    background-image:
+      linear-gradient(rgba(184,149,58,0.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(184,149,58,0.045) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+  .container { max-width: 80rem; margin: 0 auto; padding: 0 1.5rem; }
+  @media(min-width:1024px) { .container { padding: 0 2rem; } }
+
+  header {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(12,29,43,0.96);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--navy-800);
+  }
+  .nav-inner { display:flex; align-items:center; justify-content:space-between; height: 60px; }
+  .nav-logo { display:flex; align-items:center; gap:12px; text-decoration:none; }
+  .logo-mark {
+    width:32px; height:32px; background: var(--gold-500);
+    display:flex; align-items:center; justify-content:center;
+    font-size:13px; font-weight:900; color: var(--navy-950);
+  }
+  .logo-text { font-size:12px; font-weight:800; color:#fff; letter-spacing:0.5px; line-height:1.2; }
+  .logo-sub { font-size:9px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color: var(--gold-500); display:block; }
+  .nav-links { display:none; gap:28px; align-items:center; }
+  @media(min-width:768px) { .nav-links { display:flex; } }
+  .nav-links a {
+    font-size:11px; font-weight:600; color: var(--muted-dark); text-decoration:none;
+    letter-spacing:0.5px; transition: color 0.15s;
+  }
+  .nav-links a:hover { color:#fff; }
+
+  .hero { padding: 96px 0 80px; color:#fff; }
+  .tag {
+    display:inline-flex; align-items:center; gap:8px;
+    border:1px solid rgba(184,149,58,0.35);
+    padding:6px 14px;
+    font-size:9.5px; font-weight:800; letter-spacing:2.5px; text-transform:uppercase;
+    color: var(--gold-500); margin-bottom:24px;
+  }
+  .pulse { width:6px; height:6px; background: var(--gold-500); border-radius:50%; animation: pulse 2.5s ease-in-out infinite; }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+  .hero h1 {
+    font-size: clamp(2.4rem, 5vw, 4.4rem);
+    font-weight: 900; line-height: 1.04;
+    letter-spacing: -1.5px;
+    margin-bottom: 22px;
+    color: #fff;
+  }
+  .hero h1 em { font-style: normal; color: var(--gold-500); }
+  .hero p {
+    font-size: 16px; line-height: 1.7;
+    color: var(--muted-dark);
+    max-width: 50rem; margin-bottom: 30px;
+  }
+  .kpis {
+    display:grid; grid-template-columns: repeat(2, 1fr); gap:1px;
+    background: rgba(255,255,255,0.06);
+    margin-top: 36px;
+  }
+  @media(min-width:640px) { .kpis { grid-template-columns: repeat(4, 1fr); } }
+  .kpi { background: var(--navy-900); padding: 22px 20px; }
+  .kpi-val { font-size: 32px; font-weight:900; color:#fff; line-height:1; margin-bottom:6px; letter-spacing:-1px; }
+  .kpi-val .gold { color: var(--gold-500); }
+  .kpi-lbl { font-size:9.5px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color: var(--muted-dark); }
+
+  section.light-section { padding: 96px 0; background: #fff; }
+  section.cream-section { padding: 96px 0; background: var(--cream); }
+  .section-label {
+    font-size: 9.5px; font-weight: 800; letter-spacing: 4px; text-transform: uppercase;
+    color: var(--gold-500); margin-bottom: 14px;
+  }
+  .section-label.light { color: var(--gold-600); }
+  .gold-divider { width: 48px; height: 2px; background: var(--gold-500); margin-bottom: 20px; }
+  h2.section-h2 {
+    font-size: clamp(2rem, 4.2vw, 3.2rem);
+    font-weight: 900; line-height: 1.06;
+    letter-spacing: -0.8px;
+    color: var(--navy-900);
+    margin-bottom: 24px;
+  }
+  h2.section-h2 em { font-style:normal; color: var(--gold-500); }
+  p.section-body {
+    font-size: 15px; line-height: 1.7; color: #6b7280;
+    max-width: 50rem; margin-bottom: 40px;
+  }
+
+  .resources-grid { display: grid; grid-template-columns: 1fr; gap: 24px; margin-top: 32px; }
+  @media(min-width:768px) { .resources-grid { grid-template-columns: 1fr 1fr; } }
+  @media(min-width:1024px) { .resources-grid { grid-template-columns: 1fr 1fr 1fr 1fr; } }
+  .resource-card {
+    background: #fff; border: 1px solid #e5e7eb;
+    padding: 28px 26px;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+    text-decoration: none; color: inherit;
+    display: flex; flex-direction: column;
+  }
+  .resource-card:hover { border-color: var(--gold-500); transform: translateY(-2px); }
+  .resource-card.featured { background: var(--navy-900); color:#fff; border-color: var(--gold-500); border-width: 2px; }
+  .resource-card.featured:hover { background: var(--navy-800); }
+  .resource-eyebrow { font-size: 9px; font-weight: 800; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold-600); margin-bottom: 8px; }
+  .resource-card.featured .resource-eyebrow { color: var(--gold-500); }
+  .resource-title { font-size: 16px; font-weight: 900; color: var(--navy-900); margin-bottom: 6px; line-height: 1.25; letter-spacing:-0.2px; }
+  .resource-card.featured .resource-title { color: #fff; }
+  .resource-desc { font-size: 12px; line-height: 1.65; color: #6b7280; flex: 1; }
+  .resource-card.featured .resource-desc { color: var(--muted-dark); }
+
+  .steps-list { margin-top: 32px; }
+  .step {
+    display: grid; grid-template-columns: 56px 1fr; gap: 20px;
+    padding: 22px 0; border-bottom: 1px solid #e5e7eb;
+  }
+  .step-num {
+    background: var(--navy-900); color: var(--gold-500);
+    width: 44px; height: 44px;
+    display:flex; align-items:center; justify-content:center;
+    font-size: 13px; font-weight: 900; letter-spacing: 0.5px;
+  }
+  .step-body h3 { font-size: 14px; font-weight: 900; color: var(--navy-900); margin-bottom: 6px; }
+  .step-body p { font-size: 12.5px; line-height: 1.7; color: #6b7280; }
+  .step-body code { font-family: ui-monospace, Menlo, monospace; background: var(--cream); padding: 1px 6px; font-size: 11.5px; color: var(--navy-900); }
+
+  footer {
+    background: var(--navy-950); padding: 32px 0; color: var(--navy-400);
+    border-top: 1px solid var(--navy-800);
+  }
+  .footer-inner { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:14px; }
+  .footer-copy { font-size: 11px; }
+  .footer-links { display:flex; gap: 18px; flex-wrap: wrap; }
+  .footer-links a { font-size: 11px; color: var(--navy-400); text-decoration: none; transition: color 0.15s; }
+  .footer-links a:hover { color: var(--muted-dark); }
+
+  .disclaimer {
+    background: rgba(184,149,58,0.08);
+    border: 1px solid rgba(184,149,58,0.2);
+    border-left: 3px solid var(--gold-500);
+    padding: 16px 22px;
+    font-size: 12px; color: #6b7280; line-height: 1.7;
+    margin-top: 36px;
+  }
+  .disclaimer strong { color: var(--navy-900); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="nav-inner">
+      <a href="#top" class="nav-logo">
+        <div class="logo-mark">H</div>
+        <div class="logo-text">
+          Halcyon × Docthub
+          <span class="logo-sub">Outreach Package · 2026</span>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="#proposal">Proposal</a>
+        <a href="#resources">Lead List · Email · Research</a>
+        <a href="#do-this">For Rushan</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<section class="hero hero-bg" id="top">
+  <div class="container">
+    <div class="tag"><span class="pulse"></span>Outreach Package · Confidential · For Dr. Sandip Patel</div>
+    <h1>One proposal.<br>Honest framing.<br><em>Real economics for Docthub.</em></h1>
+    <p>
+      Docthub's audience of 100K+ Indian doctors isn't Halcyon's direct buyer base — they don't run
+      US practices. So this proposal isn't a "blast our offer to your community" pitch. It's a
+      three-track partnership built around relationships Docthub already has: a 9,000+ recruiter
+      network, an enterprise platform serving 30+ healthcare institutions, and credibility inside
+      India's medical professional community.
+    </p>
+    <div class="kpis">
+      <div class="kpi"><div class="kpi-val"><span class="gold">3</span></div><div class="kpi-lbl">Tracks · Each Shippable Alone</div></div>
+      <div class="kpi"><div class="kpi-val">₹<span class="gold">35</span>L</div><div class="kpi-lbl">Year-1 Revenue · Mid Case</div></div>
+      <div class="kpi"><div class="kpi-val">₹<span class="gold">2.5</span>Cr</div><div class="kpi-lbl">Year-3 ARR · Mid Case</div></div>
+      <div class="kpi"><div class="kpi-val"><span class="gold">27</span> May</div><div class="kpi-lbl">Reply Deadline</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="light-section" id="proposal">
+  <div class="container">
+    <p class="section-label light">The proposal</p>
+    <div class="gold-divider"></div>
+    <h2 class="section-h2">A 7-page proposal,<br>fully designed.</h2>
+    <p class="section-body">
+      Same design system as Halcyon's other partnership materials. Each page is a fixed
+      US Letter landscape slide that opens cleanly in any browser and exports identically to PDF.
+    </p>
+
+    <div class="resources-grid" style="grid-template-columns: 1fr;">
+      <a class="resource-card featured" href="proposals/halcyon-docthub-proposal.html" style="padding: 36px 32px;">
+        <div class="resource-eyebrow">7 pages · Recommended attachment</div>
+        <div class="resource-title" style="font-size:22px; margin-bottom:10px;">Halcyon × Docthub — Partnership Proposal</div>
+        <div class="resource-desc" style="font-size:14px; line-height:1.65; margin-bottom:20px;">
+          Cover · Why we're writing · What Halcyon is · Three tracks at a glance · Economics &amp;
+          5-year revenue model · The ask &amp; pilot · Team &amp; signature. Mid-case math throughout
+          (downside / upside variants in the appendix on request).
+        </div>
+        <div style="display:flex; gap:14px;">
+          <a href="proposals/halcyon-docthub-proposal.html" style="font-size:10.5px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold-400);text-decoration:none;border-bottom:1px solid rgba(184,149,58,0.3);padding-bottom:2px;">Open HTML →</a>
+          <a href="pdfs/Halcyon-Docthub-Proposal.pdf" style="font-size:10.5px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold-400);text-decoration:none;border-bottom:1px solid rgba(184,149,58,0.3);padding-bottom:2px;">Download PDF</a>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="cream-section" id="resources">
+  <div class="container">
+    <p class="section-label light">Working files</p>
+    <div class="gold-divider"></div>
+    <h2 class="section-h2">Lead list. Email draft.<br>Research briefing.</h2>
+    <p class="section-body">
+      Three working documents Rushan needs alongside the proposal.
+    </p>
+
+    <div class="resources-grid">
+      <a class="resource-card" href="leads/docthub-contacts.csv">
+        <div class="resource-eyebrow">CSV · 12+ contacts</div>
+        <div class="resource-title">Docthub Lead List →</div>
+        <div class="resource-desc">
+          Named individuals at Docthub with LinkedIn URLs and email guesses. Sandip Patel's email
+          is confirmed via MCA filing. Plus 7 confirmed department mailboxes and 4 office phone numbers.
+        </div>
+      </a>
+
+      <a class="resource-card" href="email/email-rushan-to-docthub.md">
+        <div class="resource-eyebrow">Markdown · Ready to send</div>
+        <div class="resource-title">The Outreach Email →</div>
+        <div class="resource-desc">
+          The email Rushan should send. Three subject-line options, full body, plain-text fallback.
+          Tight recipient list (1 TO + 2 CC + 1 BCC) — Docthub is a 50-person company, not a 1,000-person org.
+        </div>
+      </a>
+
+      <a class="resource-card" href="research/docthub-briefing.md">
+        <div class="resource-eyebrow">Markdown · Research</div>
+        <div class="resource-title">The Research Briefing →</div>
+        <div class="resource-desc">
+          The full Docthub research the proposal was built from. Company structure, product lines,
+          audience reality check, the three partnership angles, and the where-it-doesn't-work caveats.
+        </div>
+      </a>
+
+      <a class="resource-card" href="https://github.com/NaitikJoshiPro/halcyon-docthub-outreach">
+        <div class="resource-eyebrow">GitHub</div>
+        <div class="resource-title">Source Repo →</div>
+        <div class="resource-desc">
+          Public GitHub repo. All assets, fully editable. Re-render the PDF after editing the HTML
+          via headless Chrome — command in the README.
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="light-section" id="do-this">
+  <div class="container">
+    <p class="section-label light">For Rushan</p>
+    <div class="gold-divider"></div>
+    <h2 class="section-h2">What to do next.</h2>
+    <p class="section-body">
+      Smaller scope than the Leverage send. Tighter recipient list. Same discipline.
+    </p>
+
+    <div class="steps-list">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div class="step-body">
+          <h3>Read the email draft and the proposal first.</h3>
+          <p>Open <code>email/email-rushan-to-docthub.md</code> and the 7-page proposal. The honest framing on page 2 ("you don't have US practice owners — we know that") is deliberate. Don't soften it.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div class="step-body">
+          <h3>Verify the two emails.</h3>
+          <p><code>sandip.patel@docthub.com</code> is confirmed via MCA filing. <code>manish.kumar@docthub.com</code> follows the firmwide pattern. Run both through Hunter.io for sanity.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div class="step-body">
+          <h3>Send Tuesday 12 May at 09:30 IST.</h3>
+          <p>FROM: <code>outreach@halcyonmedbilling.com</code> · REPLY-TO: <code>rushan@halcyonmedbilling.com</code>. Attach the PDF, link the HTML in body. <strong>Right after sending, send Sandip a one-line LinkedIn DM</strong> — he's active there and a friendly DM lifts open rates significantly.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <div class="step-body">
+          <h3>Follow up Friday 22 May, then Tuesday 26 May.</h3>
+          <p>Same thread, reply-all, one-line bumps. After 27 May go to LinkedIn DM as the primary channel — Sandip is the gate.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">05</div>
+        <div class="step-body">
+          <h3>If the call happens — lead with Track A.</h3>
+          <p>The India hiring channel is the no-regrets leg. It pays Docthub upfront, no commitment to B/C until A proves out. Don't lead with the long-tail diaspora-association story until Sandip has felt the immediate cash.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <strong>Tone reminder:</strong> Docthub is a small, bootstrapped, founder-led company. The numbers in the proposal
+      are conservative on purpose. Don't push the high case in conversation — Sandip will respect realism more than
+      optimism, and the relationship is the asset. Be honest. Be brief.
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-copy">© 2026 Halcyon Medical Billing LLP · HIPAA Compliant · Registered LLP</div>
+      <div class="footer-links">
+        <a href="mailto:rushan@halcyonmedbilling.com">rushan@halcyonmedbilling.com</a>
+        <a href="https://github.com/NaitikJoshiPro/halcyon-docthub-outreach">Source on GitHub</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
