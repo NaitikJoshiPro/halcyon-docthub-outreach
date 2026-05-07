@@ -50,7 +50,7 @@ Naitik Joshi, CEO and co-founder of Halcyon Medical Billing LLP. We run revenue-
 
 Upfront: your Docthub audience isn't our direct buyer — Indian doctors in India aren't running US practices. The attached proposal is structured around three things you do have: Docthub Jobs as a recruiting channel for our India team, your 9,000+ recruiter network, and your enterprise reach into Indian medical associations. Per-practice unit economics inside; the commission tracks are performance-based with no upfront component.
 
-If it's worth 25 minutes, I'd prefer to do this in person — happy to come to Ahmedabad between 14 and 26 May. Otherwise a call works (IST, weekdays). Reply here or to naitik@halcyonmedbilling.com.
+If you'd like to talk, I'd prefer to do this in person — happy to come to Ahmedabad. Otherwise a call works.
 
 — Naitik
 
